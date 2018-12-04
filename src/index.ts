@@ -1,0 +1,1 @@
+console.log("Hello advent of code 2018!")

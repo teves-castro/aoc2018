@@ -1,0 +1,33 @@
+{
+  "name": "advent2018",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.18.7",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.1"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      ".git/",
+      "node_modules/",
+      "cache/",
+      "tmp/"
+    ],
+    "verbose": false,
+    "quiet": true,
+    "execMap": {
+      "js": "node"
+    },
+    "watch": [
+      "src/",
+      "package.json",
+      "tsconfig.json"
+    ],
+    "ext": "json ts"
+  },
+  "scripts": {
+    "start": "nodemon --quiet --exec 'ts-node --files --project tsconfig.json' src/index.ts"
+  }
+}
