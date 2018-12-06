@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@types/ramda": "^0.25.42",
     "nodemon": "^1.18.7",
     "ts-node": "^7.0.1",
     "typescript": "^3.2.1"
@@ -28,6 +29,15 @@
     "ext": "json ts"
   },
   "scripts": {
-    "start": "nodemon --quiet --exec 'ts-node --files --project tsconfig.json' src/index.ts"
+    "start": "nodemon --quiet --exec 'ts-node --files --project tsconfig.json' src/day1/task2.ts",
+    "build": "tsc -B"
+  },
+  "dependencies": {
+    "@types/node": "^10.12.12",
+    "@types/node-fetch": "^2.1.4",
+    "fp-ts": "^1.12.0",
+    "node-fetch": "^2.3.0",
+    "ramda": "^0.26.1",
+    "transducist": "^1.0.1"
   }
 }
