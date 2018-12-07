@@ -8,15 +8,15 @@ const stringMatch = (s1: string, s2: string) =>
     .map(([c1]) => c1)
     .join("")
 
-console.log(
-  chainFrom(ids)
-    .mapIndexed<[string, number]>((id, i) => [id, i])
-    .flatMap(([id1, i]) =>
-      chainFrom(ids)
-        .drop(i)
-        .map(id2 => stringMatch(id1, id2))
-        .filter(matching => matching.length === id1.length - 1)
-        .toIterator(),
-    )
-    .first(),
-)
+const result = chainFrom(ids)
+  .mapIndexed<[string, number]>((id, i) => [id, i])
+  .flatMap(([id1, i]) =>
+    chainFrom(ids)
+      .drop(i)
+      .map(id2 => stringMatch(id1, id2))
+      .filter(matching => matching.length === id1.length - 1)
+      .toIterator(),
+  )
+  .first()
+
+console.log(result)
