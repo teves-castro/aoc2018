@@ -38,6 +38,7 @@
     "@types/node": "^10.12.12",
     "@types/node-fetch": "^2.1.4",
     "fp-ts": "^1.12.0",
+    "immutable": "^4.0.0-rc.12",
     "node-fetch": "^2.3.0",
     "ramda": "^0.26.1",
     "transducist": "^1.0.1"
