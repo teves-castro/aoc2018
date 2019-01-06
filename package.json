@@ -31,7 +31,7 @@
     "ext": "json ts"
   },
   "scripts": {
-    "start": "nodemon --quiet --exec 'ts-node --files --project tsconfig.json' src/day3/task1.ts",
+    "start": "nodemon --quiet --exec 'ts-node --files --project tsconfig.json'",
     "build": "tsc -B"
   },
   "dependencies": {
